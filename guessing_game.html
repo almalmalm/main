@@ -2,27 +2,28 @@
 <script type = "text/javascript">
 
     var answer = parseInt(Math.random() * 100);
+
     var playerNumber = 1;
     
     while(true){
-        var userAnswer = +prompt("Ходит игрок номер " + playerNumber + ". Угадайте число от 0 до 100");
-        if(userAnswer == answer){
-            alert("Поздравляю, вы угадали! ");
+        var userAnswer = prompt("Угадайте число от 0 до 100.\nХодит игрок " + playerNumber + "\nДля выхода нажмите q.");
+        if(userAnswer == "q"){
             break;
-            //continue; - переход к следующей иттерации цикла
-        }else if( userAnswer > answer && playerNumber == 1){
-            alert("Вы ввели слишком большое число.");
+        }
+        userAnswer = parseInt(userAnswer);
+        if(userAnswer == answer){
+            alert("Поздравляю, победил игрок " + playerNumber);
+            break;
+        }else if(userAnswer > answer){
+            alert("Вы ввели слишком большое число. ");
+        }else if(userAnswer < answer){
+            alert("Вы ввели слишком маленькое число. ");
+        }
+        if(playerNumber == 1){
             playerNumber = 2;
-        }else if( userAnswer > answer && playerNumber == 2){
-            alert("Вы ввели слишком большое число.");
-            playerNumber = 1;
-        }else if( userAnswer < answer && playerNumber == 1){
-            alert("Вы ввели слишком маленькое число.");
-            playerNumber = 2;
-        }else if( userAnswer < answer && playerNumber == 2){
-            alert("Вы ввели слишком маленькое число.");
+        }else{
             playerNumber = 1;
         }
     }
-    alert("Правильный ответ: " + answer + ". Выиграл игрок номер " + playerNumber + "!");
+    alert("Правильный ответ: " + answer);
 </script>
