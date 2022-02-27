@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<script type = "text/javascript">
+
+var userAnswer = prompt("Каких камней не бывает в речке?").toLowerCase();
+var answer = "сухих";
+var score = 0;
+
+if(userAnswer == answer){
+    alert("Поздравляю! Вы угадали.");
+    score++;
+}else{
+    alert("Вы не угадали.");
+}
+
+userAnswer = prompt("Что не вместится даже в самую большую кастрюлю?").toLowerCase();
+answer = "крышка";
+
+if(userAnswer == answer){
+    alert("Поздравляю! Вы угадали.");
+    score++;
+}else{
+    alert("Вы не угадали.");
+}
+
+userAnswer = prompt("Что может одновременно стоять и висеть, стоять и ходить, висеть и стоять?").toLowerCase();
+answer = "часы";
+
+if(userAnswer == answer){
+    alert("Поздравляю! Вы угадали.");
+    score++;
+}else{
+    alert("Вы не угадали.");
+}
+
+userAnswer = prompt("Я - вода, и по воде плаваю. Кто я такая?").toLowerCase();
+answer = "льдина";
+
+if(userAnswer == answer){
+    alert("Поздравляю! Вы угадали.");
+    score++;
+}else{
+    alert("Вы не угадали.");
+}
+
+alert("Игра окончена. Количество угаданных загадок: " + score);
+
+</script>
